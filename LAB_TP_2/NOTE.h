@@ -1,28 +1,25 @@
 #pragma once
 #include <iostream>
+#include <string>
 #include <fstream>
+#include "Keeper.h"
 
 using namespace std;
 
 class NOTE
 {
 private:
-	string name;
-	string surname;
-	string number;
-	string birthDate;
+	string rec;
+	
 
 public:
-    NOTE();
-    NOTE(const NOTE&);
-    virtual ~NOTE();
-    NOTE(string name, string birthDate, string surname, string number);
-    void setNote(string name, string birthDate, string surname, string number);
-    string getDate();
-    string getName();
-    string getSurname();
-    string getNumber();
-    virtual void print();
-    virtual void printToFile(ofstream&);
+    NOTE(string rec);
+    NOTE(const NOTE& note);
+    ~NOTE() {
+            cout << "Вызван деструктор NOTE" << endl;
+    }
+    virtual void changeObject() = 0;
+    virtual void printToConsole();
+    virtual void inputFromConsole();
 };
 
