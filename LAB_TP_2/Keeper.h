@@ -24,6 +24,8 @@ public:
 	void pushback(const T& obj);
 	void popindex(int index);
 	void cleanMass();
+	void push(const T& obj, int index);
+	void sortAlphabet();
 	int getLenght() {
 		return mass_lenght;
 	}
@@ -69,6 +71,20 @@ void Keeper<T>::pushback(const T& obj) {
 }
 
 template <class T>
+void Keeper<T>::push(const T& obj, int index) {
+
+	T* temp = object;
+	int k = 0;
+	mass_lenght++;
+	object = new T[mass_lenght];
+	for (int i = 0; i < mass_lenght; i++)
+		if (i != index)
+			object[i] = temp[k++];
+		else
+			object[i] = obj;
+}
+
+template <class T>
 void Keeper<T>::popindex(int index) {
 	T* temp = new T[mass_lenght - 1];
 	int j = 0;
@@ -77,4 +93,12 @@ void Keeper<T>::popindex(int index) {
 			temp[j++] = object[i];
 	mass_lenght--;
 	object = temp;
+}
+
+template <class T>
+void Keeper<T>::sortAlphabet() {
+	for (int i = 1; i < mass_lenght; i++)
+		for (int j = 0; j < mass_lenght - i; j++)
+			if (object[j] > object[j + 1])
+				swap(object[j], object[j + 1]);
 }

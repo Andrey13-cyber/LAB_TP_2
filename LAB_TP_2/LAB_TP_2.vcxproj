@@ -139,14 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="errorProc.h" />
     <ClInclude Include="Keeper.h" />
     <ClInclude Include="NOTE.h" />
-    <ClInclude Include="Person.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="errorProc.cpp" />
     <ClCompile Include="main_menu.cpp" />
     <ClCompile Include="NOTE.cpp" />
-    <ClCompile Include="Person.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="NOTE.txt" />
