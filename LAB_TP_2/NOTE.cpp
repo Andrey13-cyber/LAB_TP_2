@@ -26,7 +26,7 @@ void NOTE::changeObject() {
 	cout << "¬ведите новый мес€ц рождени€: ";
 	arrDate[1] = errorProc(1, 12);
 	cout << "¬ведите новый год рождени€: ";
-	arrDate[2] = errorProc(0, 3000);
+	arrDate[2] = errorProc(0, 2021);
 	
 
 	cout << "¬ведите новый телефонный номер: ";
@@ -51,7 +51,7 @@ void NOTE::inputFromConsole()
 	cout << "¬ведите мес€ц рождени€: ";
 	arrDate[1] = errorProc(1, 12);
 	cout << "¬ведите год рождени€: ";
-	arrDate[2] = errorProc(0, 3000);
+	arrDate[2] = errorProc(0, 2021);
 	cout << "¬ведите телефонный номер: ";
 	number = errorProc(9999999999, 99999999999);
 }

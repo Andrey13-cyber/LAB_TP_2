@@ -10,7 +10,7 @@ using namespace std;
 class NOTE
 {
 private:
-    string name = "";
+    string name;
     long long number;
     int arrDate[3];
 public:

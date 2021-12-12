@@ -161,7 +161,7 @@ void printToMonthConsole(Keeper<NOTE*>& keeper) {
     {
 
         int month;
-        bool vivod = false;
+        bool output = false;
         cout << "¬ведите мес€ц рождени€: " << endl;
         cout << "-> ";
         cin >> month;
@@ -170,13 +170,13 @@ void printToMonthConsole(Keeper<NOTE*>& keeper) {
 
             if (month == keeper[i]->getDate()[1]) {
                 keeper[i]->printToConsole();
-                vivod = true;
+                output = true;
             }
 
         }
-        if (!vivod)
+        if (!output)
             cout << "«аписи с таким мес€цем рождени€ отсутствуют." << endl;
-
+            
     }
 }
 
